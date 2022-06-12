@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISIT420_eComCourseProject", "ISIT420_eComCourseProject\ISIT420_eComCourseProject.csproj", "{0634D484-258A-45C1-BAE9-3BB6013E3BAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0634D484-258A-45C1-BAE9-3BB6013E3BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0634D484-258A-45C1-BAE9-3BB6013E3BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0634D484-258A-45C1-BAE9-3BB6013E3BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0634D484-258A-45C1-BAE9-3BB6013E3BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E136204-CF49-4183-896A-2527FEDAAFB5}
+	EndGlobalSection
+EndGlobal
