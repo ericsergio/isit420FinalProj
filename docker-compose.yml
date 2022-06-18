@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  isit420_ecomcourseproject:
+    image: ${DOCKER_REGISTRY-}isit420ecomcourseproject
+    build:
+      context: .
+      dockerfile: ISIT420_eComCourseProject/Dockerfile

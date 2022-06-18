@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1700.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISIT420_eComCourseProject", "ISIT420_eComCourseProject\ISIT420_eComCourseProject.csproj", "{0634D484-258A-45C1-BAE9-3BB6013E3BAF}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4229F217-FE19-4029-964F-A25B83F961A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0634D484-258A-45C1-BAE9-3BB6013E3BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0634D484-258A-45C1-BAE9-3BB6013E3BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0634D484-258A-45C1-BAE9-3BB6013E3BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4229F217-FE19-4029-964F-A25B83F961A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4229F217-FE19-4029-964F-A25B83F961A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4229F217-FE19-4029-964F-A25B83F961A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4229F217-FE19-4029-964F-A25B83F961A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
