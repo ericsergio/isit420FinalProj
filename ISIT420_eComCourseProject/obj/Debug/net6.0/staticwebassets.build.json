@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vjgdYQwxvBMO0dmW+QzIJueTYVq0au/hr1lmq5RGGts=",
+  "Hash": "AzYBzo3QcPeBjMMOOJGJXhI9S7P1twENlw+hpVsd3jw=",
   "Source": "ISIT420_eComCourseProject",
   "BasePath": "_content/ISIT420_eComCourseProject",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/obj/Debug/net6.0/scopedcss/projectbundle/ISIT420_eComCourseProject.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/wwwroot/.DS_Store",
+      "SourceId": "ISIT420_eComCourseProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/wwwroot/",
+      "BasePath": "_content/ISIT420_eComCourseProject",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/wwwroot/css/site.css",
@@ -117,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
+    },
+    {
+      "Identity": "/Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/wwwroot/lib/.DS_Store",
+      "SourceId": "ISIT420_eComCourseProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/wwwroot/",
+      "BasePath": "_content/ISIT420_eComCourseProject",
+      "RelativePath": "lib/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/.DS_Store"
     },
     {
       "Identity": "/Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",

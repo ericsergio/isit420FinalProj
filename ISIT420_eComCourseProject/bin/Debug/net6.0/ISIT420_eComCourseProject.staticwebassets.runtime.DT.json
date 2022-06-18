@@ -5,6 +5,14 @@
   ],
   "Root": {
     "Children": {
+      ".DS_Store": {
+        "Children": null,
+        "Asset": {
+          "ContentRootIndex": 0,
+          "SubPath": ".DS_Store"
+        },
+        "Patterns": null
+      },
       "css": {
         "Children": {
           "site.css": {
@@ -51,6 +59,14 @@
       },
       "lib": {
         "Children": {
+          ".DS_Store": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "lib/.DS_Store"
+            },
+            "Patterns": null
+          },
           "bootstrap": {
             "Children": {
               "dist": {

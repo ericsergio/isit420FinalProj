@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AvFtaFf97xJh066FWSEFP1zp3gfPEmR3nCCV+FOuArnawxmJYXjmRX3CvKYFB88RZfUDfaCRh8C3OOp6SNjmhA==",
+  "dgSpecHash": "p5ykLosN+oHc75NMkVY1xQ8Q/QhTzWNOk7qsh64abxiNFXZPApaiRpIQfD/ULuhzciz/kctvXa1IgfeGYUFLgw==",
   "success": true,
   "projectFilePath": "/Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/ISIT420_eComCourseProject.csproj",
   "expectedPackageFiles": [
@@ -9,13 +9,13 @@
     "/Users/ericsergio/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/ericsergio/.nuget/packages/microsoft.data.sqlclient/2.1.4/microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "/Users/ericsergio/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.1.1/microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
-    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore/6.0.5/microsoft.entityframeworkcore.6.0.5.nupkg.sha512",
-    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.5/microsoft.entityframeworkcore.abstractions.6.0.5.nupkg.sha512",
-    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.5/microsoft.entityframeworkcore.analyzers.6.0.5.nupkg.sha512",
-    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.design/6.0.5/microsoft.entityframeworkcore.design.6.0.5.nupkg.sha512",
-    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.relational/6.0.5/microsoft.entityframeworkcore.relational.6.0.5.nupkg.sha512",
-    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.sqlserver/6.0.5/microsoft.entityframeworkcore.sqlserver.6.0.5.nupkg.sha512",
-    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.tools/6.0.5/microsoft.entityframeworkcore.tools.6.0.5.nupkg.sha512",
+    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore/6.0.6/microsoft.entityframeworkcore.6.0.6.nupkg.sha512",
+    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.6/microsoft.entityframeworkcore.abstractions.6.0.6.nupkg.sha512",
+    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.6/microsoft.entityframeworkcore.analyzers.6.0.6.nupkg.sha512",
+    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.design/6.0.6/microsoft.entityframeworkcore.design.6.0.6.nupkg.sha512",
+    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.relational/6.0.6/microsoft.entityframeworkcore.relational.6.0.6.nupkg.sha512",
+    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.sqlserver/6.0.6/microsoft.entityframeworkcore.sqlserver.6.0.6.nupkg.sha512",
+    "/Users/ericsergio/.nuget/packages/microsoft.entityframeworkcore.tools/6.0.6/microsoft.entityframeworkcore.tools.6.0.6.nupkg.sha512",
     "/Users/ericsergio/.nuget/packages/microsoft.extensions.caching.abstractions/6.0.0/microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "/Users/ericsergio/.nuget/packages/microsoft.extensions.caching.memory/6.0.1/microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "/Users/ericsergio/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
@@ -47,7 +47,8 @@
     "/Users/ericsergio/.nuget/packages/system.security.permissions/4.7.0/system.security.permissions.4.7.0.nupkg.sha512",
     "/Users/ericsergio/.nuget/packages/system.security.principal.windows/4.7.0/system.security.principal.windows.4.7.0.nupkg.sha512",
     "/Users/ericsergio/.nuget/packages/system.text.encoding.codepages/4.7.0/system.text.encoding.codepages.4.7.0.nupkg.sha512",
-    "/Users/ericsergio/.nuget/packages/system.windows.extensions/4.7.0/system.windows.extensions.4.7.0.nupkg.sha512"
+    "/Users/ericsergio/.nuget/packages/system.windows.extensions/4.7.0/system.windows.extensions.4.7.0.nupkg.sha512",
+    "/Users/ericsergio/.nuget/packages/westwind.aspnetcore.livereload/0.3.6/westwind.aspnetcore.livereload.0.3.6.nupkg.sha512"
   ],
   "logs": []
 }

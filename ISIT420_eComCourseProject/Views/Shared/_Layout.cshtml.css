@@ -47,3 +47,7 @@ button.accept-policy {
   line-height: 60px;
 }
 
+header {
+  text-align:center;
+  color:red;
+}

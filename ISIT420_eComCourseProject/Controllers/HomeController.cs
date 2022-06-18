@@ -6,6 +6,18 @@ namespace ISIT420_eComCourseProject.Controllers;
 
 public class HomeController : Controller
 {
+    private readonly SportsCardsContext _context;
+    private readonly IServiceProvider _serviceProvider;
+    /*private readonly ILogger<HomeController> _logger;
+    public HomeController(SportsCardsContext context
+        , IServiceProvider serviceProvider
+        , ILogger<HomeController> logger)
+    {
+        _context = context;
+        _serviceProvider = serviceProvider;
+       
+    }
+    */
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -29,4 +41,3 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
-

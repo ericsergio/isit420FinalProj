@@ -1,0 +1,17 @@
+./obj/Debug/net6.0/ISIT420_eComCourseProject.RazorAssemblyInfo.cs
+./obj/Debug/net6.0/ISIT420_eComCourseProject.GlobalUsings.g.cs
+./obj/Debug/net6.0/ISIT420_eComCourseProject.AssemblyInfo.cs
+./obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+./Models/ProductTbl.cs
+./Models/PricingTbl.cs
+./Models/SportTbl.cs
+./Models/ManufacturerTbl.cs
+./Models/ShippingCostTypeTbl.cs
+./Models/ErrorViewModel.cs
+./Models/SportsCardsContext.cs
+./Models/ListingTypeTbl.cs
+./Models/ListedProductTbl.cs
+./Controllers/HomeController.cs
+./Controllers/PricingController.cs
+./Controllers/productController.cs
+./Program.cs

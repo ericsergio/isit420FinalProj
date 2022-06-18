@@ -59,3 +59,4 @@
 /Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/obj/Debug/net6.0/ISIT420_eComCourseProject.pdb
 /Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/obj/Debug/net6.0/ISIT420_eComCourseProject.genruntimeconfig.cache
 /Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/obj/Debug/net6.0/ref/ISIT420_eComCourseProject.dll
+/Users/ericsergio/Projects/ISIT420_eComCourseProject/ISIT420_eComCourseProject/bin/Debug/net6.0/Westwind.AspNetCore.LiveReload.dll
