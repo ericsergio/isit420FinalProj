@@ -1,17 +1,19 @@
 ﻿using System;
 namespace ISIT420_eComCourseProject.Models
 {
-	public class ManufacturerTbl
-	{
-		public ManufacturerTbl()
-		{
-			Products = new HashSet<ProductTbl>();
-		}
+    public class ManufacturerTbl
+    {
+        private string? name;
 
-		public int Id { get; set; }
-		public string Name { get; set; }
+        public ManufacturerTbl()
+        {
+            Products = new HashSet<ProductTbl>();
+        }
 
-		public virtual ICollection<ProductTbl> Products { get; set; }
-	}
+        public int? Id { get; set; }
+        public string? Name { get => name; set => name = value; }
+
+        public virtual ICollection<ProductTbl> Products { get; set; }
+    }
 }
 

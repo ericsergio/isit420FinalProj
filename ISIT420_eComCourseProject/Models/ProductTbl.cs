@@ -4,9 +4,9 @@ namespace ISIT420_eComCourseProject.Models
 	public partial class ProductTbl
 	{
 		public int Id { get; set; }
-		public int Sport_fk { get; set; }
-		public int Year { get; set; }
-		public int Manufacturer_fk { get; set; }
+		public int? Sport_fk { get; set; }
+		public int? Year { get; set; }
+		public int? Manufacturer_fk { get; set; }
 		public string? MainSet { get; set; }
 		public string? SubSet { get; set; }
 		public string? PlayerName { get; set; }

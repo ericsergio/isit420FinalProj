@@ -3,91 +3,152 @@
 
 // Write your JavaScript code.
 
-$(document).ready(function() {
-    $('.headerClass').css('color', 'red');
-    console.log("one two three");
-});
+function Products(max, propCount) {
+    this.max = max;
+    this.propCount = propCount;
+}
 
+function Product(id, sportid, year, manufacturerid, mainset, subset, playername, cardno, parallel, rookie, auto, serialnumber, memorabilia, photourl ) {
+    this.id = id;
+    this.sportid = sportid;
+    this.manufacturerid = manufacturerid;
+    this.mainset = mainset;
+    this.subset = subset;
+    this.playername = playername;
+    this.cardno = cardno;
+    this.parallel = parallel;
+    this.rookie = rookie;
+    this.auto = auto;
+    this.serialnumber = serialnumber;
+    this.memorabilia = memorabilia;
+}
+rows = [];
+cells = [];
+
+function pArr() {
+    for (var p in this) {
+        console.log(this[p])
+    }
+}
 
 $(document).ready(function () {
-    $.getJSON('/api/Products').done(function () {
-        let productArray = data;
-        console.log("ten eleven twelve");
-        doTable(productArray);
+    var tbl = $('#pTable');
+    $.get('https://localhost:7074/api/Products', function (data) {
+        var counter = 0;
+        for (var p in data) {
+            var idAttr = `row${counter}`
+            counter += 1;
+            var currentRow = data[p];
+        
+            tbl.append(`<tr id = ${idAttr}> 
+                            <td>${currentRow.id}</td>
+                            <td>${currentRow.sport_fk}</td>
+                            <td>${currentRow.year}</td>
+                            <td>${currentRow.manufacturer_fk}</td>
+                            <td>${currentRow.mainSet}</td>
+                            <td>${currentRow.subSet}</td>
+                            <td>${currentRow.playerName}</td>
+                            <td>${currentRow.cardNo}</td>
+                            <td>${currentRow.parallel}</td>
+                            <td>${currentRow.rookie}</td>
+                            <td>${currentRow.auto}</td>
+                            <td>${currentRow.serialNumbered}</td>
+                            <td>${currentRow.memorabilia}</td>
+                        </tr>`);
+            var productLength = Product.length;
+            for (var prop in Product) {
+                
+            }
+            //for (var i = 0; i < productLength; i++) {
+            //    console.log(currentRow[[Product[i]]])               
+            //}
+            rows.push(data[p]);
+        }
     })
-});
+})
 
-/*function getProductTbl() {
-    $.get('http://localhost:62489/api/Products', function (data) {
-        console.log(data);
-    })
-};*/
+function addRow() {
+    var lastRow = rows.length;
+    var current = rows[lastRow];
+    for (var p in current) {
+        console.log(current[p]);
+    }
+}
+
+
+
+
 
 
 
 
 /*
 $(document).ready(function () {
-    // Send an AJAX request
-    $.getJSON('api/Orders')
-        .done(function (data) {
-            // On success, 'data' contains a list of products.
-            let orderArray = data;
-            drawTable(orderArray);
-        });
-
-    $.getJSON('api/SelectGets/GetSales')
-        .done(function (data) {
-            // On success, 'data' contains a list of salespeople.
-            let SalesPersonArray = data;
-            let salesPersonSelect = document.getElementById("salesPersonSelect");
-            SalesPersonArray.forEach(function (value) {
-                salesPersonSelect.appendChild(new Option((value.firstName + " " + value.lastName), value.salesPersonId));
-            });
-
-        });
-
-    $.getJSON('api/SelectGets/GetStores')
-        .done(function (data) {
-            // On success, 'data' contains a list of salespeople.
-            let StoreArray = data;
-            let storeSelect = document.getElementById("storeSelect");
-            StoreArray.forEach(function (value) {
-                storeSelect.appendChild(new Option(value.city, value.storeId));
-            });
-            StoreArray.forEach(function (value) {
-                storePerformanceSelect.appendChild(new Option(value.city, value.storeId));
-            });
-        });
-
-    $.getJSON('api/SelectGets/GetCds')
-        .done(function (data) {
-            // On success, 'data' contains a list of salespeople.
-            let cdArray = data;
-            let cdSelect = document.getElementById("cdSelect");
-            cdArray.forEach(function (value) {
-                cdSelect.appendChild(new Option(value.cdname, value.cdId));
-            });
-
-        });
+    var tbl = $('#productsTbl');
+    $.get('https://localhost:49747/api/Products', function (data) {
+        var first = data[0];
+        var cells = [];
+        for (for i = 0; i < Product.length; i++) {
+            cells.push(Product[i]);
+        };
+        var n = 0;
+        for (var i = 0; i < data.length; i++) {
+            tbl.append('<tr id = "current"></tr>')
+            for (var n = 0; n < cells.length; n++) {
+                var row = $('#current');
+                current.append(`<td id = ${cells[n]}>test</td>`);
+            }
+            console.log(`First : ${first}`);
+            console.log(first);
+        }
+    })
 });
-function formatItem(item) {
-    return item.counted; // + '   ' + item.subject + '   ' + item.details
-}
 */
-function doTable(productArray) {
-    // get the reference for the table
-    // creates a <table> element
-    var tbl = document.getElementById('productsTbl');
-    //var tbl = $('#productTbl');
-    //console.log(`${tbl} |||| inside doTable Function`);
-    // clear, but don't delete the header
-    while (tbl.rows.length > 1) {
-        tbl.deleteRow(1);
-        // creating rows
-        for (var r = 0; r < productArray.length; r++) {
-            var row = document.createElement("tr");
 
+
+/*
+Products.ProductList = new Products(0, 0);
+
+function initProducts(data) {
+    data = $.get('https://localhost:49747/api/Products', function (data) {
+        var first = data[0];
+        Products[[ProductList]][[max]] = data.length;
+        Products[[ProductList]][[propCount]] = first.length;
+        console.log(`Products Max : ${Products.max} \n PropCount : ${Products.propCount}`);
+    })
+}
+initProducts();
+
+*/
+
+
+
+
+/*
+$(document).ready(function () {
+    $.getJSON('https://localhost:49643/api/Products').done(function (data) {
+        let productArray = data;
+        return productArray
+    })
+});
+
+function doTable(productArray) {
+    console.log(productArray);
+}*/
+
+
+//function doTable(productArray) {
+    //var tbl = document.getElementById('productsTbl');
+        
+ //   var tbl = $('#productsTbl')[0];
+    //console.log(`${tbl} |||| inside doTable Function \n ${productArray.length}`);
+    /* clear, but don't delete the header*/
+ //   while (productArray.rows.length > 1) {
+      //  tbl.deleteRow(1);
+        // creating rows
+   //     for (var r = 0; r < productArray.length; r++) {
+     //       var row = document.createElement("tr");
+/*
             var cell0 = document.createElement("td");
             var cell1 = document.createElement("td");
             var cell2 = document.createElement("td");
@@ -132,17 +193,20 @@ function doTable(productArray) {
             row.appendChild(cell11);
             cell12.appendChild(document.createTextNode(productArray[r].Memorabilia));
             row.appendChild(cell12);
-            /*cell13.appendChild(document.createTextNode(productArray[r].PhotoURL));
+            cell13.appendChild(document.createTextNode(productArray[r].PhotoURL));
             row.appendChild(cell13);
             cell14.appendChild(document.createTextNode(productArray[r].Pricing_fk));
             row.appendChild(cell14);
             cell15.appendChild(document.createTextNode(productArray[r].ListedProduct_fk));
-            row.appendChild(cell15);*/
+            row.appendChild(cell15);
 
             tbl.appendChild(row); // add the row to the end of the table body
         }
     }
-}
+}*/
+
+
+
 /*
 function drawPerformanceTable(performanceArray) {
     // get the reference for the table

@@ -16,3 +16,32 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#pTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#pTable td, #customers th {
+    border: 1px solid #a8d0ba;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #b0c4c7;
+}
+tr:hover {
+    background-color: coral;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-size:.7em;
+    background-color: #23455ff5;
+    color: white;
+}

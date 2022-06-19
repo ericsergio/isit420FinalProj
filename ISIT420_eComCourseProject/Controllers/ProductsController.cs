@@ -4,6 +4,7 @@ using ISIT420_eComCourseProject.Models;
 
 namespace ISIT420_eComCourseProject.Controllers;
 [Route("api/[controller]")]
+//[Route("http://localhost:49643/api/Products")]
 [ApiController]
 public class ProductsController : ControllerBase
 {

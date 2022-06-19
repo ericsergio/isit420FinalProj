@@ -6,8 +6,8 @@ namespace ISIT420_eComCourseProject.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly SportsCardsContext _context;
-    private readonly IServiceProvider _serviceProvider;
+    //private readonly SportsCardsContext _context;
+    //private readonly IServiceProvider _serviceProvider;
     /*private readonly ILogger<HomeController> _logger;
     public HomeController(SportsCardsContext context
         , IServiceProvider serviceProvider
