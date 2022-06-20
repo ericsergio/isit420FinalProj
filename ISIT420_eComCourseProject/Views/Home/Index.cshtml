@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    @model ListedProductTbl
 }
 
 
@@ -21,6 +22,27 @@
                 <th>Auto</th>
                 <th>Serial Numbered</th>
                 <th>Memorabilia</th>
+            </tr>
+        </thead>
+    </table>
+
+   
+    <br />
+
+    <div>
+        <select id="playerSelect"></select>
+        <button id="searchByPlayerButton">Search By Player</button>
+    </div>
+
+    <h2> API Product Data</h2>
+
+    <table data-role="table" class="ui-responsive" id="pEbayTable>
+        <thead>
+            <tr>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Condition</th>
+                            <th>Hotness</th>
             </tr>
         </thead>
     </table>

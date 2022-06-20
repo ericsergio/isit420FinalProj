@@ -1923,25 +1923,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ericsergio\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\kyleh\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ericsergio\\source\\repos\\ISIT420_eComCourseProject\\ISIT420_eComCourseProject\\ISIT420_eComCourseProject.csproj",
+      "projectUniqueName": "C:\\Users\\kyleh\\source\\repos\\isit420FinalProj\\ISIT420_eComCourseProject\\ISIT420_eComCourseProject.csproj",
       "projectName": "ISIT420_eComCourseProject",
-      "projectPath": "C:\\Users\\ericsergio\\source\\repos\\ISIT420_eComCourseProject\\ISIT420_eComCourseProject\\ISIT420_eComCourseProject.csproj",
-      "packagesPath": "C:\\Users\\ericsergio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ericsergio\\source\\repos\\ISIT420_eComCourseProject\\ISIT420_eComCourseProject\\obj\\",
+      "projectPath": "C:\\Users\\kyleh\\source\\repos\\isit420FinalProj\\ISIT420_eComCourseProject\\ISIT420_eComCourseProject.csproj",
+      "packagesPath": "C:\\Users\\kyleh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kyleh\\source\\repos\\isit420FinalProj\\ISIT420_eComCourseProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ericsergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kyleh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2005,12 +2010,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-arm64",
-            "version": "[6.0.6, 6.0.6]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
