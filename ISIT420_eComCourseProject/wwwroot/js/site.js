@@ -24,6 +24,7 @@ function Product(id, sportid, year, manufacturerid, mainset, subset, playername,
 }
 rows = [];
 cells = [];
+ebayRows = [];
 
 function pArr() {
     for (var p in this) {
@@ -33,7 +34,6 @@ function pArr() {
 
 $(document).ready(function () {
     var tbl = $('#pTable');
-    var ebayTbl = $('#pEbayTable');
     $.get('https://localhost:7074/api/Products/AllProducts', function (data) {
         var counter = 0;
         for (var p in data) {
@@ -65,10 +65,11 @@ $(document).ready(function () {
 
     })
 
+    //AJAX Call to Server-Side LINQ Query which grabs every item in the database and returns unique PlayerNames, 
+    //meaning user can search against 'playerName' for Ebay API
     $.get('https://localhost:7074/api/Products/GetUniquePlayers', function (data) {
         //Messed Around and made a script that fills Input for a Ebay Search with API... look at LINQ in Controller, makes it so you're not returning the whole product table
         let productArray = data;
-        console.log(productArray);
         let playerSelectElement = document.getElementById("playerSelect");
         productArray.forEach(function (value) {
             playerSelectElement.appendChild(new Option(value.playerName, value.id));
@@ -77,37 +78,56 @@ $(document).ready(function () {
 
 
 
-    $.getJSON('https://api.countdownapi.com/request?api_key=08B67DBF8DDB4DC3BD5C49CD31370A58&type=search&ebay_domain=ebay.com&search_term=Tanner+Houck&customer_location=us&listing_type=buy_it_now&sold_items=false&num=10&authenticity_verified=true&output=json&page=1', function (data) {
-
-
-        console.log(data)
-
-        var counter = 0;
-        for (var p in data) {
-            var idAttr = `row${counter}`
-            counter += 1;
-            var currentRow = data[p];
-
-            console.log(currentRow)
-
-            ebayTbl.append(`<tr id = ${idAttr}> 
-                            <td>${currentRow.title}</td>
-                            <td>${currentRow.price}</td>
-                            <td>${currentRow.condition}</td>
-                            <td>${currentRow.hotness}</td>
-                        </tr>`);
-
-            //for (var i = 0; i < productLength; i++) {
-            //    console.log(currentRow[[Product[i]]])               
-            //}
-            rows.push(data[p]);
-        }
+    $.getJSON('https://api.countdownapi.com/request?api_key=08B67DBF8DDB4DC3BD5C49CD31370A58&type=search&ebay_domain=ebay.com&search_term=Tanner+Houck&customer_location=us&listing_type=buy_it_now&sold_items=true&num=10&authenticity_verified=false&output=json&page=1', function (data) {
+        console.log(data);
+        drawEbayTable(data.search_results);
     })
 
 
 
 
 });
+
+function drawEbayTable(ebayArray) {
+    // get the reference for the table
+    // creates a <table> element
+    var tbl = document.getElementById('pEbayTable');
+    while (tbl.rows.length > 1) {  // clear, but don't delete the header
+        tbl.deleteRow(1);
+    }
+
+    // creating rows
+    for (var r = 0; r < ebayArray.length; r++) {
+        var row = document.createElement("tr");
+
+        var cell0 = document.createElement("td");
+        var cell1 = document.createElement("td");
+        var cell2 = document.createElement("td");
+        var cell3 = document.createElement("td");
+        var cell4 = document.createElement("td");
+
+        cell0.appendChild(document.createTextNode(ebayArray[r].title));
+        row.appendChild(cell0);
+        cell1.appendChild(document.createTextNode(ebayArray[r].price.raw));
+        row.appendChild(cell1);
+        cell2.appendChild(document.createTextNode(ebayArray[r].condition));
+        row.appendChild(cell2);
+        cell3.appendChild(document.createTextNode(ebayArray[r].link));
+        row.appendChild(cell3);
+        cell4.appendChild(document.createTextNode(ebayArray[r].ended.date.raw));
+        row.appendChild(cell4);
+
+
+        tbl.appendChild(row); // add the row to the end of the table body
+    }
+
+}
+function searchByPlayerButton() {
+
+
+}
+
+
 
 function addRow() {
     var lastRow = rows.length;
