@@ -21,6 +21,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    font-size:.7em;
 }
 
 #pTable td, #customers th {
@@ -45,3 +46,21 @@ th {
     background-color: #23455ff5;
     color: white;
 }
+ul {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    grid-template-rows: 2.9em;
+    list-style-type: none;
+    margin: 0% 0 0 2%;
+    padding: 1% 2% 3% 1%;
+    z-index: 1;
+}
+
+.selected {
+    border:solid coral 3px;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+

@@ -4,8 +4,20 @@
 }
 
 
+
+
+
 <div>
-    <h2>Products</h2>
+    <div class="pageItems">
+        <ul class="pagefunctions">
+            <li id="doProducts" onclick="doProducts()">
+                Products
+            </li>
+            <li id="doProducts" onclick="searchPlayerEbay()">
+                Results
+            </li>
+        </ul>
+    </div>
     <table data-role="table" class="ui-responsive" id="pTable">
         <thead>
             <tr>
@@ -29,14 +41,13 @@
    
     <br />
 
-    <div>
+    <div id="selectPlayer">
         <select id="playerSelect"></select>
         <button id="searchByPlayerButton">Search By Player</button>
     </div>
 
-    <h2> API Product Data</h2>
-
-    <table data-role="table" class="ui-responsive" id="pEbayTable">
+    <h2 id="pAPIHeader"> API Product Data</h2>
+    <table data-role="table" class="ui-responsive" id="pEbayTable" onclick="searchPlayerEbay">
         <thead>
             <tr>
                 <th>Title</th>
