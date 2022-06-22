@@ -10,8 +10,8 @@ namespace ISIT420_eComCourseProject.Models
 		}
 
 		public int? Id { get; set; }
-		public string? AvgSaleAll { get; set; }
-		public string? AvgSaleMatchesBaseProduct { get; set; }
+		public string? Finalsaleamount { get; set; }
+		public string? Saledate { get; set; }
 		public string? AvgtSaleMatchesCardNo { get; set; }
 
 		public virtual ICollection<ProductTbl> Products { get; set; }

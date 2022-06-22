@@ -151,7 +151,8 @@ function doCurrentProduct() {
 
 //AJAX Call to Server-Side LINQ Query which grabs every item in the database and returns unique PlayerNames, 
 //meaning user can search against 'playerName' for Ebay API
-/*function searchPlayerEbay() {
+
+function searchPlayerEbay() {
     $('#pAPIHeader').toggle();
     $('#pEbayTable').toggle();
     $('#playerSelect').toggle();
@@ -162,13 +163,13 @@ function doCurrentProduct() {
         productArray.forEach(function (value) {
             playerSelectElement.appendChild(new Option(value.playerName, value.id));
         });
-    })/*
-    /*$.getJSON('https://api.countdownapi.com/request?api_key=08B67DBF8DDB4DC3BD5C49CD31370A58&type=search&ebay_domain=ebay.com&search_term=Tanner+Houck&customer_location=us&listing_type=buy_it_now&sold_items=true&num=10&authenticity_verified=false&output=json&page=1', function (data) {
+    })
+    $.getJSON('https://api.countdownapi.com/request?api_key=EE06CF41FE414D19B1F035E0EBDF6A94&type=search&ebay_domain=ebay.com&search_term=Topps+baseball&listing_type=buy_it_now&completed_items=true&sold_items=true', function (data) {
     console.log(data);
     drawEbayTable(data.search_results);
 })
 };
-*/
+
 function drawEbayTable(ebayArray) {
 // get the reference for the table
 // creates a <table> element

@@ -49,8 +49,6 @@ namespace ISIT420_eComCourseProject.Models
                 entity.Property(e => e.Name).HasMaxLength(12);
             });
 
-
-
             modelBuilder.Entity<ShippingCostTypeTbl>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -101,18 +99,16 @@ namespace ISIT420_eComCourseProject.Models
             });
 
 
-
-
             modelBuilder.Entity<PricingTbl>(entity =>
             {
                 entity.HasKey(e => e.Id);
                 entity.ToTable("PricingTbl");
                 entity.Property(e => e.Id).HasColumnName("id");
-                entity.Property(e => e.AvgSaleAll).HasColumnName("AvgSaleAll");
-                entity.Property(e => e.AvgSaleMatchesBaseProduct).HasColumnName("AvgSaleMatchesBaseProduct");
+                entity.Property(e => e.Finalsaleamount).HasColumnName("finalsaleall");
+                entity.Property(e => e.Saledate).HasColumnName("saledate");
                 entity.Property(e => e.AvgtSaleMatchesCardNo).HasColumnName("AvgtSaleMatchesCardNo");
-                entity.Property(e => e.AvgSaleAll).HasMaxLength(65);
-                entity.Property(e => e.AvgSaleMatchesBaseProduct).HasMaxLength(65);
+                entity.Property(e => e.Finalsaleamount).HasMaxLength(65);
+                entity.Property(e => e.Saledate).HasMaxLength(65);
                 entity.Property(e => e.AvgtSaleMatchesCardNo).HasMaxLength(65);
             });
 
