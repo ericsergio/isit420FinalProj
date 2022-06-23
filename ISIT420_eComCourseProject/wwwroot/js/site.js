@@ -42,7 +42,7 @@ function Product(id, sportid, year, manufacturerid, mainset, subset, playername,
 var prodArr = [];
 rows = [];
 //cells = [];
-ebayRows = [];
+//ebayRows = [];
 
 
 $(document).ready(function () {
@@ -104,15 +104,15 @@ function selectSingle() {
                 $('#pTable tr').eq(CurrentPrevious.selectedState.idxPrev).removeClass('selected');
                 $(this).addClass('selected');
                 //$('.selected').css('backgroundColor', 'yellow');
-                doCurrentProduct();                
+                doCurrentProduct();
             }
         })
-    })    
+    })
 }
 
 function doCurrentProduct() {
     var counter = 0;
-    Product.current = new Product(0, 'Baseball', '2022', 'Topps', 'N', 'N', 'first last', '1', 'N', 'N', 'N', 'N', 'N', 'N' )
+    Product.current = new Product(0, 'Baseball', '2022', 'Topps', 'N', 'N', 'first last', '1', 'N', 'N', 'N', 'N', 'N', 'N')
     var selectedProductValues = $('.selected td');
     selectedProductValues.each(function () {
         //console.log($(this).text());
@@ -128,25 +128,6 @@ function doCurrentProduct() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //AJAX Call to Server-Side LINQ Query which grabs every item in the database and returns unique PlayerNames, 
 //meaning user can search against 'playerName' for Ebay API
 
@@ -154,6 +135,8 @@ function searchPlayerEbay() {
     $('#pAPIHeader').toggle();
     $('#pEbayTable').toggle();
     $('#playerSelect').toggle();
+    //$('#yearSelect').toggle();
+
     $.get('https://localhost:7074/api/Products/GetUniquePlayers', function (data) {
         //Messed Around and made a script that fills Input for a Ebay Search with API... look at LINQ in Controller, makes it so you're not returning the whole product table
         let productArray = data;
@@ -161,42 +144,106 @@ function searchPlayerEbay() {
         productArray.forEach(function (value) {
             playerSelectElement.appendChild(new Option(value.playerName, value.id));
         });
+        $.get('https://localhost:7074/api/Products/GetUniqueYear', function (data) {
+            //Messed Around and made a script that fills Input for a Ebay Search with API... look at LINQ in Controller, makes it so you're not returning the whole product table
+            let productArray = data;
+            let playerSelectElement = document.getElementById("yearSelect");
+            productArray.forEach(function (value) {
+                playerSelectElement.appendChild(new Option(value.year, value.id));
+            });
+        })
     })
-    $.getJSON('https://api.countdownapi.com/request?api_key=EE06CF41FE414D19B1F035E0EBDF6A94&type=search&ebay_domain=ebay.com&search_term=Topps+baseball&listing_type=buy_it_now&completed_items=true&sold_items=true', function (data) {
-    console.log(data);
-    drawEbayTable(data.search_results);
-})
+    //$.getJSON('https://api.countdownapi.com/request?api_key=EE06CF41FE414D19B1F035E0EBDF6A94&type=search&ebay_domain=ebay.com&search_term=Topps+baseball&listing_type=buy_it_now&completed_items=true&sold_items=true', function (data) {
+    //console.log(data);
+    //drawEbayTable(data.search_results);
+    //})
 };
 
-function drawEbayTable(ebayArray) {
-// get the reference for the table
-// creates a <table> element
-var tbl = document.getElementById('pEbayTable');
-while (tbl.rows.length > 1) {  // clear, but don't delete the header
-    tbl.deleteRow(1);
+
+function GetTotalSalesForEachManufacturer() {
+    //$('#playerSelect').toggle();
+
+    $.get('https://localhost:7074/api/Products/GetTotalSalesForEachManufacturer/', function (data) {
+        drawManufacturerPriceTable(data);
+    });
+
 }
 
-// creating rows
-for (var r = 0; r < ebayArray.length; r++) {
-    var row = document.createElement("tr");
+function sumOfCardsSoldByMintedYear() {
+    //$('#playerSelect').toggle();
+    var select = document.getElementById('yearSelect');
+    var value = select.options[select.selectedIndex].text
 
-    var cell0 = document.createElement("td");
-    var cell1 = document.createElement("td");
-    var cell2 = document.createElement("td");
-    var cell3 = document.createElement("td");
-    var cell4 = document.createElement("td");
+    $.get('https://localhost:7074/api/Products/GetSumOfCardsSoldByYear/' + value + '/', function (data) {
+        console.log(data)
+    });
 
-    cell0.appendChild(document.createTextNode(ebayArray[r].title));
-    row.appendChild(cell0);
-    cell1.appendChild(document.createTextNode(ebayArray[r].price.raw));
-    row.appendChild(cell1);
-    cell2.appendChild(document.createTextNode(ebayArray[r].condition));
-    row.appendChild(cell2);
-    cell3.appendChild(document.createTextNode(ebayArray[r].link));
-    row.appendChild(cell3);
-    cell4.appendChild(document.createTextNode(ebayArray[r].ended.date.raw));
-    row.appendChild(cell4);
 
-    tbl.appendChild(row); // add the row to the end of the table body
 }
+
+function avgPlayerPrice() {
+    //$('#playerSelect').toggle();
+    var select = document.getElementById('playerSelect');
+    var value = select.options[select.selectedIndex].text
+
+    $.get('https://localhost:7074/api/Products/GetYearsAverageCardSalePrice' + '/' + value, function (data) {
+        $("#pYearUl").append('<li>' + { data } + '</li>');
+
+    });
+
+
 }
+
+function drawManufacturerPriceTable(dataArray) {
+    // get the reference for the table
+    // creates a <table> element
+    var tbl = document.getElementById('pManfacturerTable');
+    while (tbl.rows.length > 1) {  // clear, but don't delete the header
+        tbl.deleteRow(1);
+    }
+
+    
+
+
+    for (var r = 0; r < dataArray.length; r++) {
+
+        var cell0 = document.createElement("td");
+        var cell1 = document.createElement("td");
+
+        // creating rows
+
+        var row = document.createElement("tr");
+
+        switch (dataArray[r].manufacturer) {
+
+            case 0:
+                dataArray[r].manufacturer === "Bowman"
+            case 1:
+                dataArray[r].manufacturer === "Panini"
+            case 2:
+                dataArray[r].manufacturer === "Stadium Club"
+            case 3:
+                dataArray[r].manufacturer === "Tops"
+            default:
+        }
+
+        cell0.appendChild(document.createTextNode(dataArray[r].manufacturer));
+        row.appendChild(cell0);
+        cell1.appendChild(document.createTextNode(formatter.format(dataArray[r].sum)));
+        row.appendChild(cell1);
+
+
+        tbl.appendChild(row); // add the row to the end of the table body
+
+
+    }
+}
+
+var formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+
+    // These options are needed to round to whole numbers if that's what you want.
+    //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+    //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+});

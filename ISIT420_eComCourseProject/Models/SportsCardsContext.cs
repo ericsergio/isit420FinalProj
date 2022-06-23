@@ -104,7 +104,7 @@ namespace ISIT420_eComCourseProject.Models
                 entity.HasKey(e => e.Id);
                 entity.ToTable("PricingTbl");
                 entity.Property(e => e.Id).HasColumnName("id");
-                entity.Property(e => e.Finalsaleamount).HasColumnName("finalsaleall");
+                entity.Property(e => e.Finalsaleamount).HasColumnName("finalsaleamount");
                 entity.Property(e => e.Saledate).HasColumnName("saledate");
                 entity.Property(e => e.AvgtSaleMatchesCardNo).HasColumnName("AvgtSaleMatchesCardNo");
                 entity.Property(e => e.Finalsaleamount).HasMaxLength(65);

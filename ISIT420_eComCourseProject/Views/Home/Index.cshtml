@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
     @model ListedProductTbl
+
 }
 
 
@@ -38,23 +39,30 @@
         </thead>
     </table>
 
-   
-    <br />
 
+    <br />
+    
     <div id="selectPlayer">
         <select id="playerSelect"></select>
-        <button id="searchByPlayerButton">Search By Player</button>
+        <select id="yearSelect"></select>
     </div>
 
-    <h2 id="pAPIHeader"> API Product Data</h2>
-    <table data-role="table" class="ui-responsive" id="pEbayTable" onclick="searchPlayerEbay">
+    <h2 id="pAPIHeader">Q1 - Total Sum Of Sales By Selected Year</h2>
+    <ul id ="pYearUl"></ul>
+    <button id="searchYearButton" onclick="sumOfCardsSoldByMintedYear()">Sum Of FinalSales By Minted Year</button>
+   
+    <h2 id="">Q2 - Average Price Sold By PlayerName</h2>
+    
+    <button id="searchByPlayerButton" onclick="avgPlayerPrice()">Average Price By Input PlayerName</button>
+    <ul id ="pPlayerUl"></ul>
+
+    <h2 id="">Q3 - GetTotalSalesForEachManufacturer</h2>
+    <button id="searchByPlayerButton" onclick="GetTotalSalesForEachManufacturer()"> GetTotalSalesForEachManufacturer</button>
+    <table data-role="table" class="ui-responsive" id="pManfacturerTable" onclick="searchPlayerEbay">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Price</th>
-                <th>Condition</th>
-                <th>Link</th>
-                <th>SoldDate</th>
+                <th>Manufacturer</th>
+                <th>SumOfSales</th>
             </tr>
         </thead>
     </table>
