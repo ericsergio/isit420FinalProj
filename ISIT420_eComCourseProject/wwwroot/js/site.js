@@ -46,11 +46,28 @@ rows = [];
 
 
 $(document).ready(function () {
-    $('#pAPIHeader').hide();
+
+    $.get('https://localhost:7074/api/Products/GetUniquePlayers', function (data) {
+        //Messed Around and made a script that fills Input for a Ebay Search with API... look at LINQ in Controller, makes it so you're not returning the whole product table
+        let productArray = data;
+        let playerSelectElement = document.getElementById("playerSelect");
+        productArray.forEach(function (value) {
+            playerSelectElement.appendChild(new Option(value.playerName, value.id));
+        });
+        $.get('https://localhost:7074/api/Products/GetUniqueYear', function (data) {
+            //Messed Around and made a script that fills Input for a Ebay Search with API... look at LINQ in Controller, makes it so you're not returning the whole product table
+            let productArray = data;
+            let playerSelectElement = document.getElementById("yearSelect");
+            productArray.forEach(function (value) {
+                playerSelectElement.appendChild(new Option(value.year, value.id));
+            });
+        })
+    })
+    //$('#pAPIHeader').hide();
     $('#pTable').hide();
     $('#pEbayTable').hide();
-    $('#playerSelect').hide();
-    $('#yearSelect').hide();
+    //$('#playerSelect').hide();
+    //$('#yearSelect').hide();
 });
 
 function doProducts() {
@@ -133,27 +150,12 @@ function doCurrentProduct() {
 //meaning user can search against 'playerName' for Ebay API
 
 function searchPlayerEbay() {
-    $('#pAPIHeader').toggle();
+    //$('#pAPIHeader').toggle();
     $('#pEbayTable').toggle();
-    $('#playerSelect').toggle();
-    $('#yearSelect').toggle();
+    //$('#playerSelect').toggle();
+    //$('#yearSelect').toggle();
 
-    $.get('https://localhost:7074/api/Products/GetUniquePlayers', function (data) {
-        //Messed Around and made a script that fills Input for a Ebay Search with API... look at LINQ in Controller, makes it so you're not returning the whole product table
-        let productArray = data;
-        let playerSelectElement = document.getElementById("playerSelect");
-        productArray.forEach(function (value) {
-            playerSelectElement.appendChild(new Option(value.playerName, value.id));
-        });
-        $.get('https://localhost:7074/api/Products/GetUniqueYear', function (data) {
-            //Messed Around and made a script that fills Input for a Ebay Search with API... look at LINQ in Controller, makes it so you're not returning the whole product table
-            let productArray = data;
-            let playerSelectElement = document.getElementById("yearSelect");
-            productArray.forEach(function (value) {
-                playerSelectElement.appendChild(new Option(value.year, value.id));
-            });
-        })
-    })
+    
     //$.getJSON('https://api.countdownapi.com/request?api_key=EE06CF41FE414D19B1F035E0EBDF6A94&type=search&ebay_domain=ebay.com&search_term=Topps+baseball&listing_type=buy_it_now&completed_items=true&sold_items=true', function (data) {
     //console.log(data);
     //drawEbayTable(data.search_results);
@@ -176,6 +178,7 @@ function sumOfCardsSoldByMintedYear() {
     var value = select.options[select.selectedIndex].text
 
     $.get('https://localhost:7074/api/Products/GetSumOfCardsSoldByYear/' + value + '/', function (data) {
+        $("#pYearUl").empty();
         $("#pYearUl").append('<li>' + formatter.format(data) + '</li>');
 
     });
@@ -189,7 +192,7 @@ function avgPlayerPrice() {
     var value = select.options[select.selectedIndex].text
 
     $.get('https://localhost:7074/api/Products/GetYearsAverageCardSalePrice' + '/' + value, function (data) {
-        console.log(data.value)
+        $("#pPlayerUl").empty();
         $("#pPlayerUl").append('<li>' + formatter.format(data) + '</li>');
 
     });

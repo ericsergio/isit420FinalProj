@@ -14,10 +14,6 @@
             <li id="doProducts" onclick="doProducts()">
                 Products (Toggle)
             </li>
-            <li id="doProducts" onclick="searchPlayerEbay()">
-                SelectToggles 
-            </li>
-
         </ul>
     </div>
     <table data-role="table" class="ui-responsive" id="pTable">
@@ -44,22 +40,23 @@
     <br />
     
     <div id="selectPlayer">
-        <select id="playerSelect"></select>
-        <select id="yearSelect"></select>
+        
+        
     </div>
+
     <h2 id="pAPIHeader">Q1 - Total Sum Of Sales By Selected Year</h2>
-    <ul id ="pYearUl"></ul>
-    <button id="searchYearButton" onclick="sumOfCardsSoldByMintedYear()">Sum Of FinalSales By Minted Year</button>
-    <ul id ="pYearUl"></ul>
+    <select id="yearSelect"></select>
+        <button id="searchYearButton" onclick="sumOfCardsSoldByMintedYear()">Sum Of FinalSales By Minted Year</button>
+        <strong><ul id ="pYearUl"></ul></strong>
    
     <h2 id="">Q2 - Average Price Sold By PlayerName</h2>
-    
+    <select id="playerSelect"></select>
     <button id="searchByPlayerButton" onclick="avgPlayerPrice()">Average Price By Input PlayerName</button>
-    <ul id ="pPlayerUl"></ul>
+    <strong><ul id ="pPlayerUl"></ul></strong>
 
     <h2 id="">Q3 - GetTotalSalesForEachManufacturer</h2>
     <button id="searchByPlayerButton" onclick="GetTotalSalesForEachManufacturer()"> GetTotalSalesForEachManufacturer</button>
-
+    <br />
     <table data-role="table" class="ui-responsive" id="pManfacturerTable" >
         <thead>
             <tr>
