@@ -1,0 +1,6 @@
+cat combined | tr '\t' ' ' > combinedPipe
+  753  cat y | grep -v 'request' > x
+cat x | tr '/' '-' > y
+cat y | sed 's/\\/-/g' > x
+cat z | awk 'BEGIN{FS=","};{for (i = 1; i < NF; i++){print "\t" $i}}' | grep -n '' | sed 's/:/ :,/' | awk 'BEGIN{FS=":"}{print $2}' | grep -e '[a-zA-Z0-9]' | sed 's/,\t[0-6][0-9]$/|-+/' | sed 's/^,/@/' | sed 's/,//g' | tr '@' ',' | tr -d '\n' | sed 's/|-+/\n/g' > test
+

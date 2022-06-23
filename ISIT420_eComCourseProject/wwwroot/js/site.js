@@ -2,6 +2,7 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+//importPackages(Packages.org.apache.pig.scripting.js)
 
 const SPORT_FK = ['Baseball', 'Football', 'Basketball', 'Hockey', 'Nascar', 'Pokemon', 'UFC', 'Soccer',];
 const MANUFACTURER_FK = ['Bowman', 'Topps', 'Topps Chrome', 'Panini', 'Upper Deck', 'Stadium Club'];
@@ -22,10 +23,7 @@ Current.prototype.getIdx = function(){
     });
 }
 */
-/*function Products(max, propCount) {
-    this.max = max;
-    this.propCount = propCount;
-}*/
+
 
 function Product(id, sportid, year, manufacturerid, mainset, subset, playername, cardno, parallel, rookie, auto, serialnumber, memorabilia, photourl) {
     this.id = id || 0;

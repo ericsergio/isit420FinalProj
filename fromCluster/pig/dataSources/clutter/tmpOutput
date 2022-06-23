@@ -1,0 +1,8 @@
+2022-06-23 05:55:03,049 INFO pig.ExecTypeProvider: Trying ExecType : LOCAL
+2022-06-23 05:55:03,054 INFO pig.ExecTypeProvider: Picked LOCAL as the ExecType
+2022-06-23 05:55:04,017 [main] INFO  org.apache.pig.Main - Apache Pig version 0.17.0 (r1797386) compiled Jun 02 2017, 15:41:58
+2022-06-23 05:55:04,018 [main] INFO  org.apache.pig.Main - Logging error messages to: /root/finalProj/pig/dataSources/pig_1655963703957.log
+2022-06-23 05:55:04,285 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - user.name is deprecated. Instead, use mapreduce.job.user.name
+2022-06-23 05:55:06,170 [main] ERROR org.apache.pig.Main - ERROR 2997: Encountered IOException. File sh does not exist
+Details at logfile: /root/finalProj/pig/dataSources/pig_1655963703957.log
+2022-06-23 05:55:06,493 [main] INFO  org.apache.pig.Main - Pig script completed in 5 seconds and 503 milliseconds (5503 ms)

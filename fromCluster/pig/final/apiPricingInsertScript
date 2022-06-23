@@ -1,0 +1,1 @@
+cat q | awk 'BEGIN{FS="\t"};{print 0NR "\t|" $3 "|,\tNULL,\tNULL"}'

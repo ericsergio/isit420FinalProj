@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eWYuBFrRC94Kh6ya/vpe9fZKv5sGO4GT1p2bv3FzbC8=",
+  "Hash": "gVTv987u2vqcDkvewF6S6J+eUiFxYTdEbvEvzF1nw+c=",
   "Source": "ISIT420_eComCourseProject",
   "BasePath": "_content/ISIT420_eComCourseProject",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
+    },
+    {
+      "Identity": "/Users/ericsergio/Projects/isit420FinalProj/ISIT420_eComCourseProject/wwwroot/js/tryEmbeddedPig.js",
+      "SourceId": "ISIT420_eComCourseProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ericsergio/Projects/isit420FinalProj/ISIT420_eComCourseProject/wwwroot/",
+      "BasePath": "_content/ISIT420_eComCourseProject",
+      "RelativePath": "js/tryEmbeddedPig.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/tryEmbeddedPig.js"
     },
     {
       "Identity": "/Users/ericsergio/Projects/isit420FinalProj/ISIT420_eComCourseProject/wwwroot/lib/.DS_Store",

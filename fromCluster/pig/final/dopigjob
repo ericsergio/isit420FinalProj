@@ -1,0 +1,15 @@
+!#/bin/bash
+
+#The purpose of this script is to run a pig job and filter out some of the output while
+#trying to keep some of the helpful debugging output. It could be improved but works 
+#for my purposes given the amount of time I have.
+
+
+pig -x local $1 2> ./tmpOutput; 
+
+cat ./tmpOutput | 
+	grep -e 'ERROR'; 
+
+cat ./tmpOutput | 
+	grep -A 2 'org.apache.pig.PigWarning' 
+

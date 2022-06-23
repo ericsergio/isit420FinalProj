@@ -1,0 +1,1 @@
+cat q | awk 'BEGIN{FS="\t"};{print "("  NR "\t1\t@" $1 "@\t2\t" NR "\t2\t" "NULL)"}' | tr "\'" ">" | sed 's/>//g'  | tr "@" "\'" | sed 's/\t/,/g' | awk '{print $0 ","}'

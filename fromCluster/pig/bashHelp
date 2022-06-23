@@ -1,0 +1,50 @@
+clean () 
+{ 
+    mv *.log logs/;
+    mv tmpOutput* clutter/
+}
+combine () 
+{ 
+    for i in `find . -type f -name 'search*' -maxdepth 1 -print 2> /dev/null`;
+    do
+        cat $i >> ./combined;
+        mv $i ../;
+    done
+}
+dopig () 
+{ 
+    pig -x local $1 2> ./tmpOutput;
+    cat ./tmpOutput | grep -e 'ERROR';
+    cat ./tmpOutput | grep -A 2 'org.apache.pig.PigWarning'
+}
+checkfiles () 
+{ 
+    for i in `find . -type f -name 'search*' -maxdepth 1 -print 2> /dev/null`;
+    do
+        echo $i;
+        cat $i | wc -l;
+    done
+}
+combine () 
+{ 
+    for i in `ls`;
+    do
+        cat $i >> combined;
+    done
+}
+dopig () 
+{ 
+    pig -x local -x local $1 2> ./tmpOutput;
+    cat ./tmpOutput | grep -e 'ERROR';
+    cat ./tmpOutput | grep -A 2 'org.apache.pig.PigWarning'
+}
+lenFunc () 
+{ 
+    echo ${#1}
+}
+svhist () 
+{ 
+    history 2 | head -n 1 >> svHistory
+}
+function dopig { pig -x local $1 2> ./tmpOutput; cat ./tmpOutput | grep -e 'ERROR'; cat ./tmpOutput | grep -A 2 'org.apache.pig.PigWarning' ; }
+alias pig='pig -x local'
