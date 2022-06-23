@@ -212,12 +212,14 @@ function drawManufacturerPriceTable(dataArray) {
 
         var cell0 = document.createElement("td");
         var cell1 = document.createElement("td");
+        var currentRow = dataArray[r].manufacturer;
+        let manufacturerName = MANUFACTURER_FK[currentRow - 1];
 
         // creating rows
 
         var row = document.createElement("tr");
 
-        switch (dataArray[r].manufacturer) {
+        /*switch (dataArray[r].manufacturer) {
 
             case 1:
                 dataArray[r].manufacturer == "Bowman"
@@ -228,9 +230,9 @@ function drawManufacturerPriceTable(dataArray) {
             case 4:
                 dataArray[r].manufacturer == "Tops"
             default:
-        }
-
-        cell0.appendChild(document.createTextNode(dataArray[r].manufacturer));
+        }*/
+        console.log(manufacturerName);
+        cell0.appendChild(document.createTextNode(manufacturerName));
         row.appendChild(cell0);
         cell1.appendChild(document.createTextNode(formatter.format(dataArray[r].sum)));
         row.appendChild(cell1);
