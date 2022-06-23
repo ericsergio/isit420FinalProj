@@ -50,6 +50,7 @@ $(document).ready(function () {
     $('#pTable').hide();
     $('#pEbayTable').hide();
     $('#playerSelect').hide();
+    $('#yearSelect').hide();
 });
 
 function doProducts() {
@@ -135,7 +136,7 @@ function searchPlayerEbay() {
     $('#pAPIHeader').toggle();
     $('#pEbayTable').toggle();
     $('#playerSelect').toggle();
-    //$('#yearSelect').toggle();
+    $('#yearSelect').toggle();
 
     $.get('https://localhost:7074/api/Products/GetUniquePlayers', function (data) {
         //Messed Around and made a script that fills Input for a Ebay Search with API... look at LINQ in Controller, makes it so you're not returning the whole product table
@@ -175,7 +176,8 @@ function sumOfCardsSoldByMintedYear() {
     var value = select.options[select.selectedIndex].text
 
     $.get('https://localhost:7074/api/Products/GetSumOfCardsSoldByYear/' + value + '/', function (data) {
-        console.log(data)
+        $("#pYearUl").append('<li>' + formatter.format(data) + '</li>');
+
     });
 
 
@@ -187,7 +189,8 @@ function avgPlayerPrice() {
     var value = select.options[select.selectedIndex].text
 
     $.get('https://localhost:7074/api/Products/GetYearsAverageCardSalePrice' + '/' + value, function (data) {
-        $("#pYearUl").append('<li>' + { data } + '</li>');
+        console.log(data.value)
+        $("#pPlayerUl").append('<li>' + formatter.format(data) + '</li>');
 
     });
 
@@ -216,14 +219,14 @@ function drawManufacturerPriceTable(dataArray) {
 
         switch (dataArray[r].manufacturer) {
 
-            case 0:
-                dataArray[r].manufacturer === "Bowman"
             case 1:
-                dataArray[r].manufacturer === "Panini"
+                dataArray[r].manufacturer == "Bowman"
             case 2:
-                dataArray[r].manufacturer === "Stadium Club"
+                dataArray[r].manufacturer == "Panini"
             case 3:
-                dataArray[r].manufacturer === "Tops"
+                dataArray[r].manufacturer == "Stadium Club"
+            case 4:
+                dataArray[r].manufacturer == "Tops"
             default:
         }
 

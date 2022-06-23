@@ -12,7 +12,10 @@
     <div class="pageItems">
         <ul class="pagefunctions">
             <li id="doProducts" onclick="doProducts()">
-                Products
+                Products (Toggle)
+            </li>
+            <li id="doProducts" onclick="searchPlayerEbay()">
+                SelectToggles 
             </li>
 
         </ul>
@@ -44,10 +47,10 @@
         <select id="playerSelect"></select>
         <select id="yearSelect"></select>
     </div>
-
     <h2 id="pAPIHeader">Q1 - Total Sum Of Sales By Selected Year</h2>
     <ul id ="pYearUl"></ul>
     <button id="searchYearButton" onclick="sumOfCardsSoldByMintedYear()">Sum Of FinalSales By Minted Year</button>
+    <ul id ="pYearUl"></ul>
    
     <h2 id="">Q2 - Average Price Sold By PlayerName</h2>
     
@@ -56,7 +59,8 @@
 
     <h2 id="">Q3 - GetTotalSalesForEachManufacturer</h2>
     <button id="searchByPlayerButton" onclick="GetTotalSalesForEachManufacturer()"> GetTotalSalesForEachManufacturer</button>
-    <table data-role="table" class="ui-responsive" id="pManfacturerTable" onclick="searchPlayerEbay">
+
+    <table data-role="table" class="ui-responsive" id="pManfacturerTable" >
         <thead>
             <tr>
                 <th>Manufacturer</th>
