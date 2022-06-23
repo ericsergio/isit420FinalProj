@@ -62,5 +62,30 @@ ul {
     background-color: yellow;
     cursor: pointer;
 }
+#searchPlayer {
+    color: #ffefaf;
+    background-color: #003c66;
+    color: #ffffff;
+    width: 100px;
+    border-radius: 15px;
+    text-align:center;
+}
 
+#doProducts {
+    background-color: #003c66;
+    color: #ffffff;
+    width: 100px;
+    border-radius: 15px;
+    text-align:center;
+}
+
+#doProducts:hover {
+    background-color: #22a;    
+    cursor: pointer;
+}
+#searchPlayer:hover {
+    background-color: #22a;
+    
+    cursor: pointer;
+}
 
